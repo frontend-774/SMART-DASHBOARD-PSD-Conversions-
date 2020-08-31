@@ -1,3 +1,56 @@
+$(function() {
+    // Sidebar toggle behavior
+    $('#sidebarCollapse').on('click', function() {
+      $('#sidebar').toggleClass('active');
+    });
+  });
+
+
+ 
+  var d = new Date();
+  var year = d.getFullYear();
+  var month = d.getMonth()+1;
+  var day = d.getDate();
+
+  var output = d.getFullYear() + '/' +
+      (month<10 ? '0' : '') + month + '/' +
+      (day<10 ? '0' : '') + day; 
+
+    let year_ = document.getElementById("year_name");
+    year_.innerHTML = year; 
+
+    let date_ = document.getElementById("today's_date");
+    date_.innerHTML = day ;
+
+   
+        
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+      ];
+  
+  const d1 = new Date();
+   let month_  =  monthNames[d1.getMonth()];
+  let b =  document.getElementById("today's_month") ;
+   b.innerHTML = month_;
+  
+
+
+
+ 
+    // $(function(){
+    //     $("#hide-button").on('click', function () {
+    //         $(".sidebar").delay(1000).hide("slide", { direction: "left",distance:'80%' },2000);
+    //     });
+
+    // });
+    // $(function(){
+    //     $("#sidebarCollapse").on('click', function () {
+    //         $('.sidebar').delay(1000).show("slide", { direction: "left",distance:'80%' },2000);
+    //     });
+
+    // });
+
+
 
 // // demo.onclick = function()
     // // {
@@ -9,11 +62,11 @@
 //  let myheading = document.getElementById('12');
 
 
- 
+
 // myButton.onclick = function(){
 //     setusername();
 //     Check();
-    
+
 // }
 
 // function setusername(){
@@ -33,7 +86,7 @@
 // }
 // }
 
-// //Adding an Imager Changer 
+// //Adding an Imager Changer
 
 // let myImage = document.querySelector('img');
 
@@ -57,7 +110,7 @@
 //         myImage1.setAttribute('src' , './assets/images/c-programming.jpg');
 //     }
 //     else{
-//         myImage1.setAttribute('src' , './assets/images/123.PNG') ; 
+//         myImage1.setAttribute('src' , './assets/images/123.PNG') ;
 //     }
 // }
 
@@ -67,8 +120,8 @@
 
 // function creatCircle(radius){
 //     return {
-//         radius , 
-      
+//         radius ,
+
 //         draw : function(){
 //             console.log("factory function")
 //         }
@@ -81,7 +134,7 @@
 
 
 
-// // Constructor Functions 
+// // Constructor Functions
 
 // function Circle(radius){
 //     this.radius = radius;
@@ -92,7 +145,7 @@
 // }
 
 
-// const anotherCircle = new Circle(1); 
+// const anotherCircle = new Circle(1);
 
 // const circle1 = new Circle(10);
 
@@ -108,7 +161,7 @@
 // }
 
 
-// // different Method 
+// // different Method
 
 // const circle2 = new Circle1('radius' , `this.radius = radius;
 // this.draw = function(){
@@ -158,7 +211,7 @@
 
 
 
-console.log(null == undefined);
+// console.log(null == undefined);
 // let theNumber = Number(prompt("Pick a number"));
 // if (!Number.isNaN(theNumber)) {
 // console.log("Your number is the square root of " +
@@ -195,41 +248,41 @@ console.log(null == undefined);
 // }
 // printFarmInventory(7, 11);
 
-function printZeroPadedWithLabel(number , label){
-    let numberString = String(number);
-    while(numberString.length < 3){
-        numberString = "0" + numberString;
-    }
+// function printZeroPadedWithLabel(number , label){
+//     let numberString = String(number);
+//     while(numberString.length < 3){
+//         numberString = "0" + numberString;
+//     }
 
-    console.log(`${numberString} ${label}`);
-}
+//     console.log(`${numberString} ${label}`);
+// }
 
-function farmInventryCows(cow , chickens , beef){
-    printZeroPadedWithLabel(cow , "Cows");
-    printZeroPadedWithLabel(chickens , "Chicken");
-    printZeroPadedWithLabel(beef , "Beef");
-}
+// function farmInventryCows(cow , chickens , beef){
+//     printZeroPadedWithLabel(cow , "Cows");
+//     printZeroPadedWithLabel(chickens , "Chicken");
+//     printZeroPadedWithLabel(beef , "Beef");
+// }
 
-farmInventryCows(3 , 4, 123);
+// farmInventryCows(3 , 4, 123);
 
 
-function zeroPad(number, width) {
-    let string = String(number);
-    while (string.length < width) {
-    string = "0" + string;
-    }
-    return string;
-    }
-function printFarmInventory(cows, chickens, pigs) {
-    console.log(`${zeroPad(cows, 6)} Cows`);
-    console.log(`${zeroPad(chickens, 3)} Chickens`);
-    console.log(`${zeroPad(pigs, 3)} Pigs`);
-    }
-    printFarmInventory(7, 16, 3);
+// function zeroPad(number, width) {
+//     let string = String(number);
+//     while (string.length < width) {
+//     string = "0" + string;
+//     }
+//     return string;
+//     }
+// function printFarmInventory(cows, chickens, pigs) {
+//     console.log(`${zeroPad(cows, 6)} Cows`);
+//     console.log(`${zeroPad(chickens, 3)} Chickens`);
+//     console.log(`${zeroPad(pigs, 3)} Pigs`);
+//     }
+//     printFarmInventory(7, 16, 3);
 
-    let elements = ['hydrogen', 'Nitrogen' , 'belierun' ,'Boron'];
-     elements.map(function(element){
-    return element.length;
-     });
+//     let elements = ['hydrogen', 'Nitrogen' , 'belierun' ,'Boron'];
+//      elements.map(function(element){
+//     return element.length;
+//      });
 
-     console.log(elements.push("Name" , " sfdsd") );
+//      console.log(elements.push("Name" , " sfdsd") );
