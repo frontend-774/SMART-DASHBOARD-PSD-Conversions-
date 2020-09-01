@@ -26,7 +26,7 @@ body {
 /* Genric Css */
 
 .space-small {
-  heigth: 3em;
+  height: 2em;
 }
 
 .space-medium {
@@ -75,16 +75,56 @@ body {
 
 }
 
+.width-350 {
+  width: 365px;
+}
+
+.font-size-17 {
+  font-size: 15px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.mb-35 {
+  margin-bottom: 50px;
+}
 
 
 
 
 /* ==============Navbar==================== */
+
+
 #inner-image-icon {
   text-decoration: none;
-  margin-left: -45px;
+  margin-left: -44px;
   width: 44px;
 }
+
+
+.nav-hover {
+  height: 50px;
+  transition-duration: 1s;
+}
+
+.nav-hover:hover{
+  background-color: #fff;
+  box-shadow: 2px 2px 15px 0 #e5e5e5;
+  height: 50px;
+  border-style: solid;
+  border-width: 0px 8px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 12%;
+  border-color: rgb(255, 0, 183);
+  border-top-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  border-top-right-radius: 5%;
+  transition-duration: .3s;
+
+}
+
 
 .inner-wrapper {
   margin-left: 24px;
@@ -104,27 +144,19 @@ body {
   margin-right: -18px;
 
 }
-.a-main{
-  margin-left: 18px;
+
+.a-main {
+  margin-left: 14px;
   margin-top: 35px !important;
   display: block;
 }
-.a-1 {
-  display: block;
-  margin: 35px 5px 0px 27px;
-}
-.a-2{
-  display: block;
-  margin: 35px 5px 0px 16px;
-  text-decoration: none !important;
-  
-}
 
-.text-adust{
-    font-size: 10px !important;
-    display: block;
-    margin: -5px 0px 0px 31px;
-    font-weight: 700;
+
+.text-adust {
+  font-size: 10px !important;
+  display: block;
+  margin: -5px 0px 0px 31px;
+  font-weight: 700;
 }
 
 .brand {}
@@ -174,6 +206,38 @@ body {
   border-bottom: 1px dashed #fff;
 }
 
+.calender {
+  background-image: url(../Images/Calender\ Icon.png);
+  background-repeat: no-repeat;
+
+  width: 200px;
+  height: 200px;
+  margin-left: 42px;
+}
+
+#year_name {
+  padding-top: 11px;
+  padding-left: 49px;
+
+}
+
+.calender-adjust {
+  margin-left: 36px;
+  letter-spacing: 10px;
+}
+
+.img-hover:hover {
+  background-color: #fff !important;
+  box-shadow: 2px 2px 15px 0 #e5e5e5;
+  z-index: 1;
+
+}
+
+.text-color {
+  color: rgb(167, 167, 167) !important;
+}
+
+
 .text-uppercase {
   letter-spacing: 0.1em;
 }
@@ -192,11 +256,7 @@ body {
   height: 700px;
 }
 
-.vertical-nav-Js{
-  margin: 4px 4px 29px -10px;
-    font-size: 17px;
-    text-align: center;
-}
+
 
 .page-content {
   width: calc(100% - 30rem);
@@ -206,14 +266,26 @@ body {
 
 /* for toggle behavior */
 
-#sidebar.active {
+.sidebar.active {
   margin-left: -17rem;
+}
+.text-nones{
+  display: none !important;
 }
 
 #content.active {
   width: 100%;
   margin: 0;
 }
+
+#thead-style {
+  display: block !important;
+  padding-left: 55px;
+
+
+}
+
+
 
 @media (max-width: 768px) {
   #sidebar {
@@ -236,8 +308,14 @@ body {
 }
 
 
+/* ====================== Show case =========================== */
 
-/* ====================== Integrate =========================== */
+
+.bg-color-col1{
+  background-color: rgb(73, 140, 190);
+}
+
+
 
 
 /* ================Latest Updates======================== */

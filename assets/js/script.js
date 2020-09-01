@@ -1,8 +1,41 @@
-$(function() {
+let val = 0;
+
+$(function() 
+{
     // Sidebar toggle behavior
     $('#sidebarCollapse').on('click', function() {
-      $('#sidebar').toggleClass('active');
+      $('.sidebar').toggleClass('active');
+      if($(".ds-text").hasClass("text-nones")){
+        $( ".ds-text" ).animate({
+          marginRight: -3,
+          marginLeft: 0,
+
+         
+        }, 400 );
+        val = 1;
+        $(".width-350").addClass("nav-hover");
+        setTimeout(function(){ 
+        $(".ds-text").removeClass("text-nones");
+
+        }, 100);
+     
+      
+      }
+      else{
+        $(".ds-text").show();
+        $( ".ds-text" ).animate({
+          marginRight:'0px',
+          marginLeft:'-130px',
+        }, 100 );
+        $(".ds-text").addClass("text-nones"); 
+        // setTimeout(function(){ }, 0);
+        val = 0;
+        $(".width-350").removeClass("nav-hover");
+        
+      }
+
     });
+    return val;
   });
 
 
@@ -24,8 +57,8 @@ $(function() {
 
    
         
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
+    "July", "Aug", "Sept", "Oct", "Nov", "Dec"
       ];
   
   const d1 = new Date();
@@ -33,7 +66,7 @@ $(function() {
   let b =  document.getElementById("today's_month") ;
    b.innerHTML = month_;
   
-
+ 
 
 
  
