@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: alata-regular;
+  /* font-family: alata-regular; */
+  font-family: oswald;
   color: #253858;
 }
 
@@ -11,6 +12,12 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+
+}
+
+@font-face {
+  font-family: oswald;
+  src: url(../webfonts/Oswald-Regular.ttf);
 }
 
 @font-face {
@@ -23,7 +30,85 @@ body {
   src: url(../webfonts/FiraSansCondensed-ExtraBold.ttf);
 }
 
+
+.font-family-oswald {
+  font-family: oswald;
+}
+h2 , h3{
+  font-family: 'Montserrat', sans-serif;
+  color: #6c757d !important;
+}
+
 /* Genric Css */
+
+.wdth-24{
+  width: 24px;
+}
+
+.width-150{
+  width: 150px;
+}
+
+.mt-150{
+  margin-top: 150px;
+}
+
+.mb-150{
+  margin-bottom: 150px;
+}
+
+#m-adjust{
+  margin: -101px 14px;
+}
+#m2-adjust{
+  margin: -45px 11px;
+}
+#m3-adjust{
+  margin: -14px 0px;
+}
+
+
+.border-width-5{
+
+  border-width: 5px 0px !important;
+}
+
+
+.bbc-women{
+  border-bottom-color: rgb(255, 0, 183)  !important;
+}
+
+.bbc-men{
+  border-bottom-color: rgb(82, 155, 212)  !important;
+}
+
+.vertical-hr{
+  height: 111px;
+  width: 2px;
+  background-color: rgb(146, 146, 146);
+  padding: 6px 0px 7px -1px;
+ 
+}
+.p-hr{
+  position: absolute;
+  left: 97%;
+  top: 38%;
+}
+.p-adjust{
+
+}
+
+.letter-spae-1px {
+
+  letter-spacing: 1px;
+}
+.bg-pink{
+  background-color: rgb(216, 46, 156);
+}
+
+.h-60 {
+  height: 60px;
+}
 
 .space-small {
   height: 2em;
@@ -75,12 +160,25 @@ body {
 
 }
 
+.width-220 {
+  width: 220px;
+}
+
 .width-350 {
-  width: 365px;
+  width: 335px;
 }
 
 .font-size-17 {
   font-size: 15px;
+}
+
+.font-size-30 {
+  font-size: 30px;
+
+}
+
+.font-var {
+  font-variant: all-small-caps;
 }
 
 .ml-15 {
@@ -91,7 +189,9 @@ body {
   margin-bottom: 50px;
 }
 
-
+.min-width-72 {
+  min-width: 72%;
+}
 
 
 /* ==============Navbar==================== */
@@ -104,12 +204,13 @@ body {
 }
 
 
+
 .nav-hover {
   height: 50px;
   transition-duration: 1s;
 }
 
-.nav-hover:hover{
+.nav-hover:hover {
   background-color: #fff;
   box-shadow: 2px 2px 15px 0 #e5e5e5;
   height: 50px;
@@ -269,7 +370,8 @@ body {
 .sidebar.active {
   margin-left: -17rem;
 }
-.text-nones{
+
+.text-nones {
   display: none !important;
 }
 
@@ -311,14 +413,21 @@ body {
 /* ====================== Show case =========================== */
 
 
-.bg-color-col1{
+.bg-color-col1 {
   background-color: rgb(73, 140, 190);
 }
 
-
+#bg-img{
+  background-image: url(../Images/12.png);
+  background-repeat: no-repeat;
+}
 
 
 /* ================Latest Updates======================== */
+
+
+
+
 
 
 /* =-================== Footer ========================== */
