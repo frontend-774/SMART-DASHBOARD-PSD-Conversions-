@@ -1,5 +1,23 @@
 let val = 0;
 
+$( document ).ready(function() {
+    $(".pg-responsive-2").removeClass("d-none");
+    // $(".ds-text").remoClass("d-none");
+    $(".pg-responsive-2").addClass("col-xl-2");
+    $(".pg-responsive-3").addClass("col-xl-9");
+    $(".pg-responsive-3").removeClass("col-xl-11");
+    $(".pg-responsive-2").addClass("col-lg-2");
+    $(".pg-responsive-3").removeClass("col-lg-11");
+    $(".pg-responsive-2").removeClass("d-none");
+    $(".pg-responsive-3").addClass("col-lg-9");
+    $(".pg-responsive-3").removeClass("col-lg-11");
+    $(".pg-responsive-2").addClass("col-md-2");
+    $(".pg-responsive-2").removeClass("d-none");
+    $(".pg-responsive-3").addClass("col-md-9");
+    $(".pg-responsive-3").removeClass("col-md-11");
+});
+
+
 $(function() 
 {
     // Sidebar toggle behavior
@@ -9,34 +27,218 @@ $(function()
         $( ".ds-text" ).animate({
           marginRight: -3,
           marginLeft: 0,
-
-         
+          
         }, 400 );
+       
         val = 1;
         $(".width-350").addClass("nav-hover");
+        $(".wdth-adjust").addClass("col-md-9");
+        $(".wdth-adjust").removeClass("col-md-11");
+
+        $(".pg-responsive-2").removeClass("d-none");
+        // $(".ds-text").remoClass("d-none");
+        $(".pg-responsive-2").addClass("col-xl-2");
+        $(".pg-responsive-3").addClass("col-xl-9");
+        $(".pg-responsive-3").removeClass("col-xl-11");
+        $(".pg-responsive-2").addClass("col-lg-2");
+        $(".pg-responsive-3").removeClass("col-lg-11");
+        $(".pg-responsive-2").removeClass("d-none");
+        $(".pg-responsive-3").addClass("col-lg-9");
+        $(".pg-responsive-3").removeClass("col-lg-11");
+        $(".pg-responsive-2").addClass("col-md-2");
+        $(".pg-responsive-2").removeClass("d-none");
+        $(".pg-responsive-3").addClass("col-md-9");
+        $(".pg-responsive-3").removeClass("col-md-11");
+    
+
+        $(".add-display-none").removeClass("display-none");
         setTimeout(function(){ 
         $(".ds-text").removeClass("text-nones");
 
         }, 100);
-     
-      
       }
-      else{
-        $(".ds-text").show();
+      
+      else
+      {
         $( ".ds-text" ).animate({
           marginRight:'0px',
           marginLeft:'-130px',
-        }, 100 );
+        }, 400);
         $(".ds-text").addClass("text-nones"); 
-        // setTimeout(function(){ }, 0);
+        $(".wdth-adjust").addClass("col-md-11");
+
+        // page adustment
+        $(".pg-responsive-2").addClass("col-xl-2");
+        $(".pg-responsive-2").removeClass("d-none");
+        $(".pg-responsive-3").addClass("col-xl-9");
+        $(".pg-responsive-3").addClass("col-xl-11");
+        
+        $(".pg-responsive-2").addClass("col-lg-2");
+        $(".pg-responsive-2").removeClass("d-none");
+        $(".pg-responsive-3").addClass("col-lg-9");
+        $(".pg-responsive-3").removeClass("col-lg-11");
+        
+        $(".pg-responsive-2").addClass("col-md-2");
+        $(".pg-responsive-2").removeClass("d-none");
+        $(".pg-responsive-3").addClass("col-md-9");
+        $(".pg-responsive-3").removeClass("col-md-11");
+        
+        
         val = 0;
         $(".width-350").removeClass("nav-hover");
-        
-      }
-
+        $(".add-display-none").addClass("display-none");
+        $(".wdth-adjust").removeClass("col-md-9");
+        $(".wdth-adjust").addClass("col-md-11");
+    
+      } 
+ 
     });
     return val;
   });
+
+  
+  $(document).ready(function () {
+      if ($(window).width() < 576) {
+          $(".s1").text("TV");
+      } else {
+          $(".s1").text("TOTAL VISITORS");
+      }
+  });
+  $(window).resize(function () {
+      if ($(window).width() < 576) {
+          $(".s1").text("TV");
+      } else {
+          $(".s1").text("TOTAL VISITORS");
+      }
+  });
+
+  $(document).ready(function () {
+      if ($(window).width() < 576) {
+          $(".s2").text("M v F");
+      } else {
+          $(".s2").text("MALE VS FEMALE");
+      }
+  });
+  $(window).resize(function () {
+      if ($(window).width() < 576) {
+          $(".s2").text("M v F");
+      } else {
+          $(".s2").text("MALE VS FEMALE");
+      }
+  });
+
+  $(document).ready(function () {
+      if ($(window).width() < 576) {
+          $(".s3").text("AG");
+      } else {
+          $(".s3").text("AVG AGE");
+      }
+  });
+  $(window).resize(function () {
+      if ($(window).width() < 576) {
+          $(".s3").text("AA");
+      } else {
+          $(".s3").text("AVG AGE");
+      }
+  });
+
+  $(document).ready(function () {
+      if ($(window).width() < 576) {
+          $(".s4").text("AT");
+      } else {
+          $(".s4").text("AVG TIME");
+      }
+  });
+  $(window).resize(function () {
+      if ($(window).width() < 576) {
+          $(".s4").text("AT");
+      } else {
+          $(".s4").text("AVG TIME");
+      }
+  });
+
+
+  $(window).on("load",function()
+	{
+		var o=$("#line-stacked-area");
+		new Chart(o,{type:"line",
+			options:{responsive:!0,
+				maintainAspectRatio:!1,
+				legend:{position:"bottom"},
+			hover:{mode:"label"},
+			scales:{xAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Month"}}],yAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Value"}}]},title:{display:!0,text:"Chart.js Line Chart - Legend"}},data:{labels:["January","February","March","April","May","June","July"],
+			datasets:[{label:"My First dataset",data:[45,39,56,45,40,32,22],backgroundColor:"#ec0bad",borderColor:"transparent",pointBorderColor:"#ec0bad",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4},
+			{label:"My Second dataset",data:[28,48,40,55,46,32,22],backgroundColor:"#4f97cf",borderColor:"transparent",pointBorderColor:"#5175E0",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4}]}})
+	});
+
+    $("#1").click(function() {
+
+		var o=$("#line-stacked-area");
+		new Chart(o,{type:"line",
+			options:{responsive:!0,
+				maintainAspectRatio:!1,
+				legend:{position:"bottom"},
+			hover:{mode:"label"},
+			scales:{xAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Month"}}],yAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Value"}}]},title:{display:!0,text:"Chart.js Line Chart - Legend"}},data:{labels:["January","February","March","April","May","June","July"],
+			datasets:[{label:"My First dataset",data:[45,39,56,45,40,32,22],backgroundColor:"#ec0bad",borderColor:"transparent",pointBorderColor:"#ec0bad",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4},
+			
+
+
+			]}})	
+
+})
+
+    $("#2").click(function() {
+
+		var o=$("#line-stacked-area");
+		new Chart(o,{type:"line",
+			options:{responsive:!0,
+				maintainAspectRatio:!1,
+				legend:{position:"bottom"},
+			hover:{mode:"label"},
+			scales:{xAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Month"}}],yAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Value"}}]},title:{display:!0,text:"Chart.js Line Chart - Legend"}},data:{labels:["January","February","March","April","May","June","July"],
+			datasets:[{label:"My First dataset",data:[25,49,26,15,30,22,32],backgroundColor:"#ec0bad",borderColor:"transparent",pointBorderColor:"#ec0bad",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4},
+			
+
+
+			{label:"My Second dataset",data:[28,48,40,55,46,32,22],backgroundColor:"#4f97cf",borderColor:"transparent",pointBorderColor:"#5175E0",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4}]}})	
+
+    })
+
+$("#3").click(function() {
+
+		var o=$("#line-stacked-area");
+		new Chart(o,{type:"line",
+			options:{responsive:!0,
+				maintainAspectRatio:!1,
+				legend:{position:"bottom"},
+			hover:{mode:"label"},
+			scales:{xAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Month"}}],yAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Value"}}]},title:{display:!0,text:"Chart.js Line Chart - Legend"}},data:{labels:["January","February","March","April","May","June","July"],
+			datasets:[{label:"My First dataset",data:[25,49,26,15,30,22,32],backgroundColor:"#ec0bad",borderColor:"transparent",pointBorderColor:"#ec0bad",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4},
+			{label:"My Second dataset",data:[28,48,40,55,46,32,22],backgroundColor:"#4f97cf",borderColor:"transparent",pointBorderColor:"#5175E0",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4}]}})	
+
+})
+
+$("#4").click(function() {
+
+		var o=$("#line-stacked-area");
+		new Chart(o,{type:"line",
+			options:{responsive:!0,
+				maintainAspectRatio:!1,
+				legend:{position:"bottom"},
+			hover:{mode:"label"},
+			scales:{xAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Month"}}],yAxes:[{display:!0,gridLines:{color:"#4C8FC4",drawTicks:!1},scaleLabel:{display:!0,labelString:"Value"}}]},title:{display:!0,text:"Chart.js Line Chart - Legend"}},data:{labels:["January","February","March","April","May","June","July"],
+			datasets:[{label:"My First dataset",data:[25,49,26,32,30,22,32],backgroundColor:"#ec0bad",borderColor:"transparent",pointBorderColor:"#ec0bad",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4},
+			
+
+
+			{label:"My Second dataset",data:[28,23,43,55,23,32,22],backgroundColor:"#4f97cf",borderColor:"transparent",pointBorderColor:"#5175E0",pointBackgroundColor:"#FFF",pointBorderWidth:2,pointHoverBorderWidth:2,pointRadius:4}]}})	
+
+})
+
+
+
+
 
 
  

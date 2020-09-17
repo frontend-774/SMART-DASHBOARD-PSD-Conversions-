@@ -9,7 +9,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 100%;
   height: 100%;
 
@@ -34,75 +34,91 @@ body {
 .font-family-oswald {
   font-family: oswald;
 }
-h2 , h3{
+
+h2,
+h3 {
   font-family: 'Montserrat', sans-serif;
   color: #6c757d !important;
 }
 
 /* Genric Css */
 
-.wdth-24{
+.wdth-24 {
   width: 24px;
 }
 
-.width-150{
+.width-150 {
   width: 150px;
 }
 
-.mt-150{
+.mt-150 {
   margin-top: 150px;
 }
 
-.mb-150{
+.mb-150 {
   margin-bottom: 150px;
 }
 
-#m-adjust{
+#m-adjust {
   margin: -101px 14px;
 }
-#m2-adjust{
+
+#m2-adjust {
   margin: -45px 11px;
 }
-#m3-adjust{
+
+#m3-adjust {
   margin: -14px 0px;
 }
 
 
-.border-width-5{
+.border-width-5 {
 
   border-width: 5px 0px !important;
 }
 
 
-.bbc-women{
-  border-bottom-color: rgb(255, 0, 183)  !important;
+.bbc-women {
+  border-bottom-color: rgb(255, 0, 183) !important;
+
 }
 
-.bbc-men{
-  border-bottom-color: rgb(82, 155, 212)  !important;
+.bbc-men {
+  border-bottom-color: rgb(82, 155, 212) !important;
 }
 
-.vertical-hr{
+.clr-pink {
+  color: rgb(255, 0, 183) !important;
+}
+
+.vertical-hr {
   height: 111px;
   width: 2px;
   background-color: rgb(146, 146, 146);
   padding: 6px 0px 7px -1px;
- 
-}
-.p-hr{
-  position: absolute;
-  left: 97%;
-  top: 38%;
-}
-.p-adjust{
 
 }
+
+.p-hr {
+  position: absolute;
+  left: 96%;
+  top: 38%;
+}
+
+.p-hr-2 {
+  position: absolute;
+  left: 102%;
+  top: 38%;
+}
+
+.p-adjust {}
 
 .letter-spae-1px {
 
   letter-spacing: 1px;
 }
-.bg-pink{
+
+.bg-pink {
   background-color: rgb(216, 46, 156);
 }
 
@@ -226,6 +242,10 @@ h2 , h3{
 
 }
 
+.wdth-adjust {
+  animation-direction: reverse;
+}
+
 
 .inner-wrapper {
   margin-left: 24px;
@@ -240,6 +260,10 @@ h2 , h3{
   height: 700px;
 }
 
+.display-none {
+  display: none !important;
+}
+
 .icon-image {
   text-decoration: none;
   margin-right: -18px;
@@ -247,7 +271,7 @@ h2 , h3{
 }
 
 .a-main {
-  margin-left: 14px;
+  /* margin-left: 14px; */
   margin-top: 35px !important;
   display: block;
 }
@@ -256,7 +280,7 @@ h2 , h3{
 .text-adust {
   font-size: 10px !important;
   display: block;
-  margin: -5px 0px 0px 31px;
+ 
   font-weight: 700;
 }
 
@@ -269,7 +293,7 @@ h2 , h3{
 }
 
 .js-icon {
-  margin: 5px 100px 0px 10px;
+  margin: 5px 100px 0px -6px;
 }
 
 .height-nav {
@@ -343,6 +367,22 @@ h2 , h3{
   letter-spacing: 0.1em;
 }
 
+#y {
+  transition: .7s;
+}
+
+#y:hover {
+  box-shadow: 0 1px 2px #e5e5e5,
+    1px 3px 1px #e5e5e5,
+    2px 5px 1px #e5e5e5,
+    4px 7px 1px #e5e5e5,
+    6px 9px 1px #e5e5e5,
+    8px 11px 1px #e5e5e5;
+
+}
+
+
+
 .text-gray {
   color: #aaa;
 }
@@ -352,7 +392,7 @@ h2 , h3{
   width: 14rem;
   height: 100vh;
   left: 138px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); */
   transition: all 0.4s;
   height: 700px;
 }
@@ -361,15 +401,15 @@ h2 , h3{
 
 .page-content {
   width: calc(100% - 30rem);
-  transition: all 0.4s;
+  transition: all 0.9s;
   z-index: 1;
 }
 
 /* for toggle behavior */
 
-.sidebar.active {
+/* .sidebar.active {
   margin-left: -17rem;
-}
+} */
 
 .text-nones {
   display: none !important;
@@ -383,8 +423,6 @@ h2 , h3{
 #thead-style {
   display: block !important;
   padding-left: 55px;
-
-
 }
 
 
@@ -417,17 +455,89 @@ h2 , h3{
   background-color: rgb(73, 140, 190);
 }
 
-#bg-img{
+#bg-img {
   background-image: url(../Images/12.png);
   background-repeat: no-repeat;
 }
 
 
+.table-reflow td {
+  color: #6c757d !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.table-reflow thead {
+  font-size: 13px;
+}
+
+
+.height {}
+
 /* ================Latest Updates======================== */
 
+/* js Graph */
+.mob1 {
+  padding-top: 4px;
+}
+
+#line-stacked-area {
+  height: 230px;
+}
+
+.s1,
+.s2,
+.s3,
+.s4 {
+  width: 98px;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px solid #DEDEDF;
+  font-family: mont2;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 35px;
+  transition: .7s all;
+  color: rgba(90, 93, 102, 0.702);
+}
+
+.s2,
+.s3,
+.s4 {
+  margin-top: 3px;
+}
+
+.s2 {
+  margin-top: 10px;
+}
+
+.s3 {
+  margin-top: 10px;
+}
+
+.s4 {
+  margin-top: 10px;
+}
+
+.s1:hover,
+.s2:hover,
+.s3:hover,
+.s4:hover {
+  background-color: #4D92C8;
+  cursor: pointer;
+
+  color: white;
+}
 
 
 
+
+@media(max-width:992px) {
+  .js-icon {
+    display: none;
+  }
+}
 
 
 /* =-================== Footer ========================== */

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <title>PSD HOLU</title>
 </head>
 
@@ -17,62 +18,67 @@
     <!-- ===============  Navbar  =================== -->
 
     <div class="container-fluid">
-        <div class="row p-3 height-nav box-shadow-class">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                <div class="row">
-                    <div class="brand">
-                        <a href="#"><img class="brand-img img-fluid" src="./assets/Images/Logo (1).png" alt=""></a>
-                    </div>
-                    <div class="js-icon">
-                        <button id="sidebarCollapse" type="button" class="btn  rounded-pill shadow-sm"><img
-                                class="img-fluid icon-small" src="./assets/Images/Left - Menu.png" alt=""></button>
+        <div class="row box-shadow-class">
+            <nav class="col-lg-12 col-md-12 navbar navbar-expand-lg">
+                <a href="#" class="navbar-brand">
+                    <img class="brand-img" src="./assets/Images/Logo (1).png" alt="">
+                </a>
 
-                    </div>
-                    <div class="search-bar">
-                        <form class="form-inline  my-2 my-lg-0">
-                            <input class="search-bar-width form-control rounded-pill mr-sm-2 d-inline-block"
-                                type="search" placeholder="Search..." aria-label="Search">
-                            <div>
-                                <img class="search-img" src="./assets/Images/Search Icon.png" alt="">
-                            </div>
-                        </form>
-                    </div>
+                <div class="js-icon nav-fill">
+                    <button id="sidebarCollapse" type="button" class="btn d-md-block d-sm-none d-none">
+                        <img class="icon-small" src="./assets/Images/Left - Menu.png" alt="">
+                    </button>
                 </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                <div class="row">
-                    <ul class="ml-auto d-flex">
-                        <div class="setting-icon px-2">
-                            <img src="./assets/Images/Settings Icon.png" alt="">
+                <div class="search-bar">
+                    <form class="form-inline  my-2 my-lg-0 ">
+                        <input class="search-bar-width form-control rounded-pill mr-sm-2 d-inline-block" type="search"
+                            placeholder="Search..." aria-label="Search">
+                        <div>
+                            <img class="search-img" src="./assets/Images/Search Icon.png" alt="">
                         </div>
-                        <div class="icon px-2">
-                            <img src="./assets/Images/Notification.png" alt="">
-                        </div>
-                        <div class="col-circle-bar px-2">
-                            <img src="./assets/Images/Avater.png" alt="">
-                        </div>
-                        <div class=" px-2">
-                            <div class="dropdown">
-                                <button class="btn " type="button" id="dropdownMenu1" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="font-weight"> Lorem pro</span> <img
-                                        src="./assets/Images/Drop Down Arow.png" alt="">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <a class="dropdown-item" href="#!">Profile_1</a>
-                                    <a class="dropdown-item" href="#!">Profile_2</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="js-timer ">
-                        </div>
-                        <div class="menu px-2">
-                            <img src="./assets/Images/Right - Menu.png" alt="">
-                        </div>
+                    </form>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> <img src="./assets/Images/Right - Menu.png" alt=""></span>
+            </button>
+                <div class="collapse navbar-collapse" id="nav1">
 
+                    <ul class="navbar-nav ml-auto nav-fill">
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">
+                                <img src="./assets/Images/Settings Icon.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item icon px-2">
+                            <a class="nav-link" href="#">
+                                <img src="./assets/Images/Notification.png" alt="">
+
+                            </a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Tooltip on bottom">
+                                <img src="./assets/Images/Avater.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown my-auto">
+                            <button class="btn " type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                <span class="font-weight"> Lorem pro</span> <img
+                                    src="./assets/Images/Drop Down Arow.png" alt="">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <a class="dropdown-item" href="#!">Profile_1</a>
+                                <a class="dropdown-item" href="#!">Profile_2</a>
+                            </div>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="nav-link" href="#"> <img src="./assets/Images/Right - Menu.png" alt=""></a>
+                        </li>
                     </ul>
                 </div>
-            </div>
+             
+            </nav>
         </div>
     </div>
 
@@ -80,11 +86,12 @@
     <!-- ===============  Showcase  =================== -->
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 box-shadow-class page-content">
-                <a href="#" class="a-main">
-                    <img class="icon-medium" src="./assets/Images/Avater (2).png " alt="">
+        <div class="row ">
+            <!-- Fixed Nav -->
 
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 box-shadow-class page-content text-center pg-responsive-1">
+                <a href="#" class="a-main">
+                    <img class="icon-medium" src="./assets/Images/Avater (2).png" alt="">
                 </a>
                 <div>
                     <h4 class="font-weight text-center">Lorem Pro</h4>
@@ -93,14 +100,13 @@
 
                 <div class=" space-medium"></div>
 
-
                 <div class="row width-350  nav-hover d-flex align-items-center mb-35 ">
-                    <div class="col-md-3 m-auto">
+                    <div class="col-md-4">
                         <a href="#" class=" img-hover text-decoration-none ">
                             <img class=" img-fluid" src="./assets/Images/Monitor Icon.png" alt="">
                         </a>
                     </div>
-                    <div class="col-md-6 text-center m-auto  ">
+                    <div class="col-md-6 text-center m-auto ">
 
                         <strong class=" font-size-17 text-uppercase text-secondary ds-text">
                             Dashboard
@@ -110,7 +116,7 @@
                 </div>
 
                 <div class="row width-350  nav-hover  d-flex align-items-center  mb-35">
-                    <div class="col-md-3 m-auto p-0">
+                    <div class="col-md-4 pr-4">
                         <a href="#" class="img-hover text-decoration-none">
                             <img class="icon-image" src="./assets/Images/Message Icon.png" alt="">
                             <img class="icon-image" src="./assets/Images/Message Icon copy.png" alt="">
@@ -127,7 +133,7 @@
                 </div>
 
                 <div class="row width-350  nav-hover  d-flex align-items-center  mb-35">
-                    <div class="col-md-3 m-auto">
+                    <div class="col-md-4">
                         <a href="#" class="text-decoration-none">
                             <img class=" img-fluid" src="./assets/Images/Layer 1344.png" alt="">
                         </a>
@@ -140,7 +146,7 @@
                 </div>
 
                 <div class="row width-350  nav-hover  d-flex align-items-center  mb-35">
-                    <div class="col-md-3 m-auto">
+                    <div class="col-md-4">
                         <a href="#" class=" text-decoration-none">
                             <img class="img-fluid" src="./assets/Images/Settings Icon (2).png" alt="">
                         </a>
@@ -152,16 +158,17 @@
                         </strong>
                     </div>
                 </div>
+
             </div>
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 p-0">
+            <div class="xl-d-block d-none col-lg-2 col-md-2 col-sm-2 p-0 bg-light add-display-none  pg-responsive-2">
                 <!-- Vertical navbar Hidden-->
                 <div class="row">
-                    <div class="col-md-12 m-auto">
-                        <div class="vertical-nav bg-light sidebar">
-                            <div class="media-body pt-4">
+                    <div class="col-md-12 m-auto ">
+                        <div class="vertical-nav bg-light sidebar  ">
+                            <div class="media-body pt-4 ">
                                 <div class="calender ">
                                     <span class="d-block text-color" id="year_name"></span>
-                                    <div class=" mt-4 d-block calender-adjust">
+                                    <div class=" mt-4 d-block calender-adjust ">
                                         <span
                                             class="lead text-black-50 text-color  d-inline-block text-uppercase font-weight-bolder"
                                             id="today's_date"></span>
@@ -171,24 +178,26 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 bg-light">
-                <div class="row  my-4 ml-2">
-                    <div class="col-md-3 d-inline-block">
-                        <div class="row bg-white h-100 width-220 rounded-left">
-                            <div class="col-md-3 m-auto">
+            <div class="col-xl-11 col-lg-11 col-md-11 col-sm-8 bg-light wdth-adjust pl-0 pg-responsive-3" id="content">
+
+                <!-- Row 1 -->
+
+                <div class="row my-4 ml-2">
+                    <div class="col-md-3 col-sm-6  d-inline-block ">
+                        <div class="row bg-white h-100 rounded-left w-100" id="y">
+                            <div class="col-md-3 col-sm-3  m-auto">
                                 <img class=" img-fluid" src="./assets/Images/Layer 1351.png" alt="">
                             </div>
-                            <div class="col-md-9 bg-color-col1 rounded-right">
+                            <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
-                                    <div class="col-md-3 my-auto">
+                                    <div class="col-md-3 col-sm-4 my-auto">
                                         <span class="text-white my-auto font-size-30  font-family-oswald">38</span>
                                     </div>
-                                    <div class="col-md-9 my-auto">
+                                    <div class="col-md-9 col-sm-8 my-auto">
                                         <p class="d-inline text-white font-var font-family-oswald letter-spae-1px">Total
                                             Visitors</p>
                                     </div>
@@ -196,17 +205,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 d-inline-block">
-                        <div class="row bg-white h-100 width-220 rounded-left">
-                            <div class="ml-3 col-md-3 m-auto ">
+                    <div class="col-md-3 col-sm-6 d-inline-block ">
+                        <div class="row bg-white h-100 rounded-left w-100 mx-0" id="y">
+                            <div class="ml-3 col-md-3 col-sm-3 m-auto ">
                                 <img class=" img-fluid" src="./assets/Images/Group 12.png" alt="">
                             </div>
-                            <div class="col-md-9 bg-color-col1 rounded-right">
+                            <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
-                                    <div class="col-md-3 my-auto p-0">
+                                    <div class="col-md-3 col-sm-4 my-auto p-0">
                                         <span class="text-white my-auto font-size-30  font-family-oswald">59/125</span>
                                     </div>
-                                    <div class="col-md-9 my-auto pl-5">
+                                    <div class="col-md-9 col-sm-8 my-auto pl-5">
                                         <p class="d-inline text-white font-var font-family-oswald letter-spae-1px">Male
                                             Vs Fmale</p>
                                     </div>
@@ -214,18 +223,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 d-inline-block">
-                        <div class="row bg-white h-100 width-220 rounded-left">
-                            <div class="col-md-3 m-auto ">
+                    <div class="col-md-3 col-sm-6 d-inline-block  ">
+                        <div class="row bg-white h-100 w-100 rounded-left mx-0" id="y">
+                            <div class="col-md-3 col-sm-3 m-auto ">
                                 <img class=" img-fluid" src="./assets/Images/Finance_SME_Start_Up_Out_Line_53-512.png"
                                     alt="">
                             </div>
-                            <div class="col-md-9 bg-color-col1 rounded-right">
+                            <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
-                                    <div class="col-md-3 my-auto">
+                                    <div class="col-md-3 col-sm-4 my-auto">
                                         <span class="text-white my-auto font-size-30  font-family-oswald">87</span>
                                     </div>
-                                    <div class="col-md-9 my-auto">
+                                    <div class="col-md-9 col-sm-8 my-auto">
                                         <p class="d-inline text-white font-var font-family-oswald letter-spae-1px">Avg
                                             age</p>
                                     </div>
@@ -233,17 +242,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 d-inline-block">
-                        <div class="row bg-white h-100 width-220 rounded-left">
-                            <div class="col-md-3 m-auto ">
+                    <div class="col-md-3 col-sm-6 d-inline-block ">
+                        <div class="row bg-white h-100  w-100 rounded-left " id="y">
+                            <div class="col-md-3 col-sm-3 m-auto ">
                                 <img class=" img-fluid" src="./assets/Images/clock.png" alt="">
                             </div>
-                            <div class="col-md-9 bg-color-col1 rounded-right">
+                            <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
-                                    <div class="col-md-3 my-auto">
+                                    <div class="col-md-3 col-sm-4 my-auto">
                                         <span class="text-white my-auto font-size-30  font-family-oswald">43</span>
                                     </div>
-                                    <div class="col-md-9 my-auto">
+                                    <div class="col-md-9 col-sm-8 my-auto">
                                         <p class="d-inline text-white font-var font-family-oswald letter-spae-1px">Avg
                                             Time</p>
                                     </div>
@@ -253,8 +262,11 @@
                     </div>
 
                 </div>
-                <div class="row ml-2 bg-white">
-                    <div class="col-md-6">
+
+                <!-- Row 2 -->
+
+                <div class="row mx-2 bg-white box-shadow-class rounded">
+                    <div class="col-md-5 ">
                         <div class="row  mt-3">
                             <div class="col-md-6">
                                 <div class="row">
@@ -274,7 +286,7 @@
                                             <a class="btn text-secondary " href="#" id="dropdownMenuLink"
                                                 data-toggle="dropdown">
                                                 <span class="dropdown-toggle text-secondary pr-2"></span>
-                                                Last Weak
+                                                Last Month
                                             </a>
                                             <img class=" img-fluid d-inline-block"
                                                 src="./assets/Images/MENU copy (1).png" alt="">
@@ -292,13 +304,14 @@
                             </div>
 
                         </div>
-                        <div class="row justify-content-center mt-150 mb-150">
+                        <div class="space-medium"></div>
+                        <div class="row justify-content-center">
                             <div class="col-md-3 ">
                                 <div class="row ">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 text-center">
                                         <!-- <img class="img-fluid" src="./assets/Images/Ellipse 1083 copie 2.png" alt=""> -->
                                         <img class="img-fluid d-block" src="./assets/Images/POS..png" alt="PosImg">
-                                        <h2 class="ml-3 mt-4 text-truncate">45%</h2>
+                                        <h5 class="ml-3 mt-4 text-truncate text-secondary">45%</h5>
                                     </div>
                                 </div>
 
@@ -306,10 +319,10 @@
                             <div class="col-md-3">
                                 <div class="row">
 
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 text-center">
                                         <!-- <img  src="./assets/Images/Ellipse 1083 copie.png" alt="/Ellipse 1083 copie.png"> -->
                                         <img class="img-fluid d-block" src="./assets/Images/NEUTRAL.png" alt="PosImg">
-                                        <h2 class="ml-3 mt-4 text-truncate">35%</h2>
+                                        <h5 class="ml-2 mt-4 text-truncate text-secondary">35%</h5>
                                     </div>
                                 </div>
 
@@ -318,23 +331,21 @@
                             <div class="col-md-3">
                                 <div class="row">
 
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 text-center">
                                         <!-- <img  src="./assets/Images/Ellipse 1083.png" alt="/Ellipse 1083 copie.png"> -->
                                         <img class="img-fluid d-block" src="./assets/Images/NEG..png" alt="PosImg">
-                                        <h2 class="ml-3 mt-4 text-truncate">20%</h2>
+                                        <h5 class="ml-3 mt-4 text-truncate text-secondary">20%</h5>
                                     </div>
                                 </div>
 
                             </div>
                             <hr class="vertical-hr p-hr">
                         </div>
-
-
-
+                        
                     </div>
 
 
-                    <div class="pl-5 col-md-6">
+                    <div class="pl-2 col-md-7">
                         <div class="row mt-3">
                             <div class="col-md-6 mt-2">
                                 <span class="text-uppercase font-weight-bolder text-secondary">Statistics</span>
@@ -359,36 +370,37 @@
                             </div>
                         </div>
 
-                        <div class="space-large "></div>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <img class=" img-fluid"
-                                    src="./assets/Images/246-2463804_transparent-bar-graph-png-bar-graph-examples-for.png"
-                                    alt="">
+                        <div class="space-medium "></div>
+                        <div class="row flex-column-reverse flex-sm-row">
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+                                <canvas id="line-stacked-area"></canvas>
                             </div>
-                            <div class="col-md-4">
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
-                                </div>
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
-                                </div>
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
-                                </div>
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-3 mob1">
+                                <div class="row mob2">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-6 col-sm-4 col-md-12">
+                                        <div class="s1" id="0">TOTAL VISITORS</div>
+                                        <div class="s2" id="1">MALE VS FEMALE</div>
+                                    </div>
+                                    <div class="col-6 col-sm-6 col-md-12 move">
+                                        <div class="s3" id="2">AVG AGE</div>
+                                        <div class="s4" id="3">AVG TIME</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                <div class="space-medium"></div>
+
                     </div>
 
+                 
                 </div>
 
 
-                <!-- Part 2 -->
+                <!-- Row 3 -->
 
-                <div class="row mt-5 ml-2 bg-white">
+
+                <div class="row mt-5 mx-2 bg-white box-shadow-class rounded">
                     <div class="col-md-8 ">
                         <div class="row  mt-3">
                             <div class="col-md-6">
@@ -404,11 +416,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="row">
-                                    <div class="col-md-6 mt-1">
+                                    <div class="col-md-6 mt-1 " id="y">
                                         <span class=" text-center text-uppercase font-weight-bolder text-secondary">Avg
                                             Dewll Time</span>
                                     </div>
-                                    <div class="col-md-6 text-right">
+                                    <div class="col-md-6 text-right ">
                                         <img class=" ml-auto" src="./assets/Images/MENU copy (1).png" alt="">
                                     </div>
                                 </div>
@@ -420,18 +432,18 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-2"></div>
-                                    <div
+                                    <div id="y"
                                         class="col-md-3 bbc-women rounded-top border-width-5 rounded-bottom border border-light bg-light">
                                         <img class="mx-auto mt-3 img-fluid d-block mb-3" src="./assets/Images/woman.png"
                                             alt="PosImg">
                                     </div>
-                                    <div
-                                        class="col-md-3 bbc-women rounded-top mx-auto border-width-5 rounded-bottom border border-light bg-light">
+                                    <div id="y"
+                                        class=" col-md-3 bbc-women rounded-top mx-auto border-width-5 rounded-bottom border border-light bg-light">
                                         <img class="mx-auto  mt-3 img-fluid d-block mb-3" src="./assets/Images/man.png"
                                             alt="PosImg">
 
                                     </div>
-                                    <hr class="vertical-hr  p-adjust">
+                                    <hr class="vertical-hr p-adjust">
                                 </div>
 
                                 <div class="row">
@@ -450,7 +462,7 @@
 
                             <div class="col-md-6">
                                 <div class="row">
-                                    <div class="col-md-10 text-center justify-content-center">
+                                    <div class="col-md-10 text-center justify-content-center ">
                                         <img src="./assets/Images/DWELL T..png" alt="">
                                     </div>
                                     <div class="col-md-1">
@@ -483,7 +495,7 @@
                         <div class="space-medium"></div>
                         <div class="row">
                             <div class="col-md-12">
-                                <table class="table table-reflow table-hover">
+                                <table class="table table-reflow table-sm table-hover">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -519,18 +531,215 @@
                     </div>
 
                 </div>
+
+                <!-- Row 4 -->
+
+                <div class="row my-5 mx-2 bg-white box-shadow-class rounded">
+                    <div class="col-md-7 ">
+                        <div class="row  mt-3">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12 mt-1">
+                                        <span
+                                            class=" text-center text-uppercase font-weight-bolder text-secondary">Nationallity</span>
+                                        <span
+                                            class="text-white ml-2 wdth-24 pl-2 rounded-circle bg-pink d-inline-block">8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <div class="dropdown rounded-pill table-bordered ml-auto width-150">
+
+                                            <a class="btn text-secondary " href="#" id="dropdownMenuLink"
+                                                data-toggle="dropdown">
+                                                <span class="dropdown-toggle text-secondary pr-2"></span>
+                                                Last Weak
+                                            </a>
+                                            <img class=" img-fluid d-inline-block"
+                                                src="./assets/Images/MENU copy (1).png" alt="">
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="space-medium "></div>
+
+
+
+                        <div class="row justify-content-center mx-auto">
+                            <div class="col-md-12 mx-auto ">
+
+                                <table class="table table-reflow table-hover text-center px-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Vedio </th>
+                                            <th>0:00 - 14:59</th>
+                                            <th>15:00 - 24:00</th>
+                                            <th>30:00 - 40:00</th>
+                                            <th>40:20 - 53:00</th>
+                                            <th>52:00 - 66:00</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                            <hr class="vertical-hr p-hr-2">
+                        </div>
+
+                        <div class="space-medium "></div>
+                    </div>
+
+
+                    <div class="pl-5 col-md-5">
+                        <div class="row mt-3">
+                            <div class="col-md-10 mt-2">
+                                <span class="text-uppercase font-weight-bolder text-secondary">Repeated
+                                    Visitors</span>
+                                <span class="text-white ml-2 wdth-24 pl-2 rounded-circle bg-pink d-inline-block">
+                                    8
+                                </span>
+
+                            </div>
+
+                            <div class="col-md-2 text-right">
+                                <img class=" ml-auto" src="./assets/Images/MENU copy (1).png" alt="">
+                            </div>
+
+                        </div>
+
+                        <div class="space-medium "></div>
+                        <div class="row my-3">
+                            <div class="col-md-12">
+                                <img class=" img-fluid" src="./assets/Images/SIDE VALUE.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-md-12 text-center">
+                                <div class=" d-inline-block mx-4">
+                                    <span class="text-white ml-2 wdth-24 pl-2 rounded-circle bg-pink d-inline-block">
+                                        8
+                                    </span>
+                                    Vedio 1
+                                </div>
+                                <div class=" d-inline-block  mx-5">
+                                    <span class="text-white ml-2 wdth-24 pl-2 rounded-circle bg-pink d-inline-block">
+                                        8
+                                    </span>
+                                    Vedio 2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-md-12 text-center">
+                        <h3 class="clr-pink font-weight-bold">Lorem</h3>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ 
+  
+  
+  
+  
+    <footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/bootstrap.bundle.js"></script>
+          
+          <script src="./assets/js/jquery.js"></script>
+          <script src="./assets/js/bootstrap.min.js"></script>
+          <script src="./assets/js/bootstrap.bundle.js"></script>
+        <script src="app-assets/vendors/js/charts/chart.min.js"></script>
+        <script src="app-assets/vendors/js/charts/echarts/echarts.js"></script>
+     
+
     <script src="./assets/js/script.js"></script>
+
+    </footer>
 
 
 </body>
 
 </html>
+
+
+<!-- <div class="col-md-8">
+                                <img class=" img-fluid"
+                                    src="./assets/Images/246-2463804_transparent-bar-graph-png-bar-graph-examples-for.png"
+                                    alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
+                                    Lorem
+                                </div>
+                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
+                                    Lorem
+                                </div>
+                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
+                                    Lorem
+                                </div>
+                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
+                                    Lorem
+                                </div>
+                            </div> -->
