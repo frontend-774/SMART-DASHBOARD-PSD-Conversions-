@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/bootstrapimage.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
@@ -20,7 +22,7 @@
     <div class="container-fluid">
         <div class="row box-shadow-class">
             <nav class="col-lg-12 col-md-12 navbar navbar-expand-lg">
-                <a href="#" class="navbar-brand">
+                <a href="#" class="navbar-brand" id="all-vertical-bar">
                     <img class="brand-img" src="./assets/Images/Logo (1).png" alt="">
                 </a>
 
@@ -30,18 +32,25 @@
                     </button>
                 </div>
                 <div class="search-bar">
-                    <form class="form-inline  my-2 my-lg-0 ">
-                        <input class="search-bar-width form-control rounded-pill mr-sm-2 d-inline-block" type="search"
-                            placeholder="Search..." aria-label="Search">
-                        <div>
-                            <img class="search-img" src="./assets/Images/Search Icon.png" alt="">
+                    <form id="search-form" class="form-inline " role="form" method="post"
+                        action="//www.google.com/search" target="_blank">
+                        <div class="p-1  rounded rounded-pill shadow-sm">
+                            <div class="input-group">
+                                <input type="search" placeholder="Search.." aria-describedby="button-addon1"
+                                    class="form-control text-secondary font-weight-lightF border-0 search-bar-width">
+                                <div class="input-group-append">
+                                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i
+                                            class="fa fa-search text-secondary "></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"> <img src="./assets/Images/Right - Menu.png" alt=""></span>
-            </button>
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> <img src="./assets/Images/Right - Menu.png" alt=""></span>
+                </button>
                 <div class="collapse navbar-collapse" id="nav1">
 
                     <ul class="navbar-nav ml-auto nav-fill">
@@ -67,7 +76,7 @@
                                 <span class="font-weight"> Lorem pro</span> <img
                                     src="./assets/Images/Drop Down Arow.png" alt="">
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <div class="dropdown-menu dropdown-all" aria-labelledby="dropdownMenu1">
                                 <a class="dropdown-item" href="#!">Profile_1</a>
                                 <a class="dropdown-item" href="#!">Profile_2</a>
                             </div>
@@ -77,7 +86,7 @@
                         </li>
                     </ul>
                 </div>
-             
+
             </nav>
         </div>
     </div>
@@ -88,8 +97,7 @@
     <div class="container-fluid">
         <div class="row ">
             <!-- Fixed Nav -->
-
-            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 box-shadow-class page-content text-center pg-responsive-1">
+            <div class="col-lg-1 col-md-2 col-sm-2 box-shadow-class page-content text-center pg-responsive-1 hide-vertical-bar">
                 <a href="#" class="a-main">
                     <img class="icon-medium" src="./assets/Images/Avater (2).png" alt="">
                 </a>
@@ -101,8 +109,8 @@
                 <div class=" space-medium"></div>
 
                 <div class="row width-350  nav-hover d-flex align-items-center mb-35 ">
-                    <div class="col-md-4">
-                        <a href="#" class=" img-hover text-decoration-none ">
+                    <div class="col-lg-4 col-md-12 nav-effect ver-nav-center">
+                        <a href="#" class="text-decoration-none ">
                             <img class=" img-fluid" src="./assets/Images/Monitor Icon.png" alt="">
                         </a>
                     </div>
@@ -116,8 +124,8 @@
                 </div>
 
                 <div class="row width-350  nav-hover  d-flex align-items-center  mb-35">
-                    <div class="col-md-4 pr-4">
-                        <a href="#" class="img-hover text-decoration-none">
+                    <div class="col-lg-4 col-md-12 pr-4 nav-effect ver-nav-center">
+                        <a href="#" class="text-decoration-none">
                             <img class="icon-image" src="./assets/Images/Message Icon.png" alt="">
                             <img class="icon-image" src="./assets/Images/Message Icon copy.png" alt="">
                             <img id="inner-image-icon" src="./assets/Images/Layer 1346.png" alt="">
@@ -133,7 +141,7 @@
                 </div>
 
                 <div class="row width-350  nav-hover  d-flex align-items-center  mb-35">
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-12 nav-effect ver-nav-center">
                         <a href="#" class="text-decoration-none">
                             <img class=" img-fluid" src="./assets/Images/Layer 1344.png" alt="">
                         </a>
@@ -146,7 +154,7 @@
                 </div>
 
                 <div class="row width-350  nav-hover  d-flex align-items-center  mb-35">
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-12 nav-effect ver-nav-center">
                         <a href="#" class=" text-decoration-none">
                             <img class="img-fluid" src="./assets/Images/Settings Icon (2).png" alt="">
                         </a>
@@ -160,7 +168,8 @@
                 </div>
 
             </div>
-            <div class="xl-d-block d-none col-lg-2 col-md-2 col-sm-2 p-0 bg-light add-display-none  pg-responsive-2">
+            <!-- Js nav -->
+            <div class="col-lg-2 col-md-2 col-sm-2 p-0 bg-light add-display-none  pg-responsive-2 ">
                 <!-- Vertical navbar Hidden-->
                 <div class="row">
                     <div class="col-md-12 m-auto ">
@@ -182,15 +191,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-11 col-lg-11 col-md-11 col-sm-8 bg-light wdth-adjust pl-0 pg-responsive-3" id="content">
+            <!-- Main showcase -->
+            <div class="col-lg-9 col-md-8 col-sm-11 bg-light wdth-adjust pl-0 pg-responsive-3" id="content">
 
                 <!-- Row 1 -->
 
-                <div class="row my-4 ml-2">
-                    <div class="col-md-3 col-sm-6  d-inline-block ">
-                        <div class="row bg-white h-100 rounded-left w-100" id="y">
+                <div class="row my-4">
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-sm-1 my-md-1">
+                        <div class="row bg-white rounded-left mx-1" id="y">
                             <div class="col-md-3 col-sm-3  m-auto">
-                                <img class=" img-fluid" src="./assets/Images/Layer 1351.png" alt="">
+                                <img class=" img-fluid mx-auto d-block icon-nav-medium"
+                                    src="./assets/Images/Layer 1351.png" alt="">
                             </div>
                             <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
@@ -205,29 +216,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 d-inline-block ">
-                        <div class="row bg-white h-100 rounded-left w-100 mx-0" id="y">
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-sm-1 my-md-1">
+                        <div class="row bg-white rounded-left mx-1" id="y">
                             <div class="ml-3 col-md-3 col-sm-3 m-auto ">
-                                <img class=" img-fluid" src="./assets/Images/Group 12.png" alt="">
+                                <img class=" img-fluid mx-auto d-block icon-nav-medium"
+                                    src="./assets/Images/Group 12.png" alt="">
                             </div>
                             <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
-                                    <div class="col-md-3 col-sm-4 my-auto p-0">
+                                    <div class="col-md-3 col-sm-4 my-auto">
                                         <span class="text-white my-auto font-size-30  font-family-oswald">59/125</span>
                                     </div>
                                     <div class="col-md-9 col-sm-8 my-auto pl-5">
-                                        <p class="d-inline text-white font-var font-family-oswald letter-spae-1px">Male
-                                            Vs Fmale</p>
+                                        <p
+                                            class="add-txt d-inline text-white font-var font-family-oswald letter-spae-1px">
+                                            M
+                                            Vs F</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 d-inline-block  ">
-                        <div class="row bg-white h-100 w-100 rounded-left mx-0" id="y">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 my-sm-1 my-md-1">
+                        <div class="row bg-white rounded-left mx-1" id="y">
                             <div class="col-md-3 col-sm-3 m-auto ">
-                                <img class=" img-fluid" src="./assets/Images/Finance_SME_Start_Up_Out_Line_53-512.png"
-                                    alt="">
+                                <img class=" img-fluid mx-auto d-block icon-nav-medium"
+                                    src="./assets/Images/Finance_SME_Start_Up_Out_Line_53-512.png" alt="">
                             </div>
                             <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
@@ -242,10 +256,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 d-inline-block ">
-                        <div class="row bg-white h-100  w-100 rounded-left " id="y">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-12 my-sm-1 my-md-1">
+                        <div class="row bg-white rounded-left mx-1" id="y">
                             <div class="col-md-3 col-sm-3 m-auto ">
-                                <img class=" img-fluid" src="./assets/Images/clock.png" alt="">
+                                <img class=" img-fluid mx-auto d-block icon-nav-medium" src="./assets/Images/clock.png"
+                                    alt="">
                             </div>
                             <div class="col-md-9 col-sm-9 bg-color-col1 rounded-right">
                                 <div class="row h-100 text-center">
@@ -266,9 +281,9 @@
                 <!-- Row 2 -->
 
                 <div class="row mx-2 bg-white box-shadow-class rounded">
-                    <div class="col-md-5 ">
+                    <div class="col-lg-5 col-md-12 col-sm-12 ">
                         <div class="row  mt-3">
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="row">
                                     <div class="col-md-12 mt-1">
                                         <span
@@ -278,20 +293,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="row">
-                                    <div class="col-md-12 text-center">
-                                        <div class="dropdown rounded-pill table-bordered ml-auto width-150">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                                        <div class="dropdown rounded-pill table-bordered ml-auto width-150 drp-dwn-hover">
 
-                                            <a class="btn text-secondary " href="#" id="dropdownMenuLink"
+                                            <a class="btn text-secondary box-shadow-none" href="#" id="dropdownMenuLink"
                                                 data-toggle="dropdown">
                                                 <span class="dropdown-toggle text-secondary pr-2"></span>
                                                 Last Month
-                                            </a>
-                                            <img class=" img-fluid d-inline-block"
+                                                <img class=" img-fluid d-inline-block pl-2"
                                                 src="./assets/Images/MENU copy (1).png" alt="">
+                                            </a>
+                                         
 
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
                                                 <a class="dropdown-item" href="#">Action</a>
                                                 <a class="dropdown-item" href="#">Another action</a>
                                                 <a class="dropdown-item" href="#">Something else here</a>
@@ -306,7 +322,7 @@
                         </div>
                         <div class="space-medium"></div>
                         <div class="row justify-content-center">
-                            <div class="col-md-3 ">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
                                 <div class="row ">
                                     <div class="col-md-12 text-center">
                                         <!-- <img class="img-fluid" src="./assets/Images/Ellipse 1083 copie 2.png" alt=""> -->
@@ -316,7 +332,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-lg-3 col-md-3 col-sm-3 ">
                                 <div class="row">
 
                                     <div class="col-md-12 text-center">
@@ -328,9 +344,8 @@
 
 
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-lg-3 col-md-3 col-sm-3 ">
                                 <div class="row">
-
                                     <div class="col-md-12 text-center">
                                         <!-- <img  src="./assets/Images/Ellipse 1083.png" alt="/Ellipse 1083 copie.png"> -->
                                         <img class="img-fluid d-block" src="./assets/Images/NEG..png" alt="PosImg">
@@ -339,27 +354,28 @@
                                 </div>
 
                             </div>
-                            <hr class="vertical-hr p-hr">
+                            <hr class="d-lg-block d-none vertical-hr p-hr">
                         </div>
-                        
+
                     </div>
 
 
-                    <div class="pl-2 col-md-7">
+                    <div class="pl-2 col-lg-7 col-md-12 col-sm-12 col-12">
                         <div class="row mt-3">
-                            <div class="col-md-6 mt-2">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt-2">
                                 <span class="text-uppercase font-weight-bolder text-secondary">Statistics</span>
                             </div>
-                            <div class="col-md-6">
-                                <div class="dropdown rounded-pill table-bordered ml-auto width-150">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="dropdown rounded-pill table-bordered ml-auto width-150 ">
 
-                                    <a class="btn text-secondary " href="#" id="dropdownMenuLink"
+                                    <a class="btn text-secondary box-shadow-none pl-4 align-items-center" href="#" id="dropdownMenuLink"
                                         data-toggle="dropdown">
                                         <span class="dropdown-toggle text-secondary pr-2"></span>
                                         Last Weak
-                                    </a>
-                                    <img class=" img-fluid d-inline-block" src="./assets/Images/MENU copy (1).png"
+                                        <img class=" img-fluid d-inline-block pl-2" src="./assets/Images/MENU copy (1).png"
                                         alt="">
+                                    </a>
+                         
 
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <a class="dropdown-item" href="#">Action</a>
@@ -372,10 +388,10 @@
 
                         <div class="space-medium "></div>
                         <div class="row flex-column-reverse flex-sm-row">
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+                            <div class="col-10 col-sm-10 col-md-10 col-lg-9">
                                 <canvas id="line-stacked-area"></canvas>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-4 col-lg-3 mob1">
+                            <div class="col-2 col-sm-2 col-md-2 col-lg-3 mob1">
                                 <div class="row mob2">
                                     <div class="col-sm-2"></div>
                                     <div class="col-6 col-sm-4 col-md-12">
@@ -389,11 +405,11 @@
                                 </div>
                             </div>
                         </div>
-                <div class="space-medium"></div>
+                        <div class="space-medium"></div>
 
                     </div>
 
-                 
+
                 </div>
 
 
@@ -401,26 +417,26 @@
 
 
                 <div class="row mt-5 mx-2 bg-white box-shadow-class rounded">
-                    <div class="col-md-8 ">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-12">
                         <div class="row  mt-3">
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="row">
-                                    <div class="col-md-6 mt-1">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-4 mt-1">
                                         <span class=" text-center text-uppercase font-weight-bolder text-secondary">Male
                                             Vs Female</span>
                                     </div>
-                                    <div class="col-md-6 text-right">
-                                        <img class=" ml-auto" src="./assets/Images/MENU copy (1).png" alt="">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-4 text-right">
+                                        <img class=" ml-auto" src="./assets/Images/menu .png" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="row">
-                                    <div class="col-md-6 mt-1 " id="y">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-4  mt-1 " id="y">
                                         <span class=" text-center text-uppercase font-weight-bolder text-secondary">Avg
                                             Dewll Time</span>
                                     </div>
-                                    <div class="col-md-6 text-right ">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-4  text-right ">
                                         <img class=" ml-auto" src="./assets/Images/MENU copy (1).png" alt="">
                                     </div>
                                 </div>
@@ -429,16 +445,14 @@
 
                         <div class="space-medium"></div>
                         <div class="row justify-content-center ">
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div id="y"
-                                        class="col-md-3 bbc-women rounded-top border-width-5 rounded-bottom border border-light bg-light">
+                                    <div class="col-lg-3 col-md-1"></div>
+                                    <div id="y" class="col-lg-3 col-md-4 col-sm-4 ml-sm-3 bbc-women rounded-top border-width-5 rounded-bottom border border-light bg-light">
                                         <img class="mx-auto mt-3 img-fluid d-block mb-3" src="./assets/Images/woman.png"
                                             alt="PosImg">
                                     </div>
-                                    <div id="y"
-                                        class=" col-md-3 bbc-women rounded-top mx-auto border-width-5 rounded-bottom border border-light bg-light">
+                                    <div id="y" class="col-lg-3 col-md-4 col-sm-4 bbc-women rounded-top mx-auto border-width-5 rounded-bottom border border-light bg-light">
                                         <img class="mx-auto  mt-3 img-fluid d-block mb-3" src="./assets/Images/man.png"
                                             alt="PosImg">
 
@@ -447,26 +461,24 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-5">
-                                        <h3 class="mt-4  pl-4">40%</h3>
+                                    <div class="col-lg-3 col-md-1"></div>
+                                    <div class="col-lg-4 col-md-5 col-sm-5 text-center">
+                                        <h3 class="mt-4 pl-1 pl-sm-2">40%</h3>
                                     </div>
-                                    <div class="col-md-5">
-                                        <h3 class="mt-4 pl-4">55%</h3>
+                                    <div class="col-lg-4 col-md-5 col-sm-6 text-center">
+                                        <h3 class="mt-4 pl-3 pl-sm-4">55%</h3>
                                     </div>
                                 </div>
 
-
-
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="row">
                                     <div class="col-md-10 text-center justify-content-center ">
                                         <img src="./assets/Images/DWELL T..png" alt="">
                                     </div>
                                     <div class="col-md-1">
-                                        <hr class=" vertical-hr ">
+                                        <hr class="d-lg-block d-none vertical-hr ">
                                     </div>
                                 </div>
                             </div>
@@ -476,23 +488,23 @@
                     </div>
 
 
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-12">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div class="row mb-md-4 mb-sm-4">
+                            <div class="col-lg-12 col-md-12 col-sm-12  col-12">
                                 <div class="row mt-3">
-                                    <div class="col-md-6 ">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-4 ">
                                         <span class=" text-center text-uppercase font-weight-bolder text-secondary">
                                             Age Groups
                                         </span>
                                     </div>
-                                    <div class="col-md-6 text-right">
-                                        <img class=" ml-auto" src="./assets/Images/MENU copy (1).png" alt="">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-4 text-right">
+                                        <img class=" ml-auto" src="./assets/Images/menu .png" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="space-medium"></div>
+                        <div class="d-lg-block d-none space-medium"></div>
                         <div class="row">
                             <div class="col-md-12">
                                 <table class="table table-reflow table-sm table-hover">
@@ -535,9 +547,9 @@
                 <!-- Row 4 -->
 
                 <div class="row my-5 mx-2 bg-white box-shadow-class rounded">
-                    <div class="col-md-7 ">
-                        <div class="row  mt-3">
-                            <div class="col-md-6">
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-12 ">
+                        <div class="row  mb-md-5 mb-sm-5  mt-3">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="row">
                                     <div class="col-md-12 mt-1">
                                         <span
@@ -547,7 +559,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
                                         <div class="dropdown rounded-pill table-bordered ml-auto width-150">
@@ -574,7 +586,7 @@
 
                         </div>
 
-                        <div class="space-medium "></div>
+                        <div class="d-lg-block d-none space-medium "></div>
 
 
 
@@ -636,16 +648,16 @@
                                 </table>
 
                             </div>
-                            <hr class="vertical-hr p-hr-2">
+                            <hr class="d-lg-block d-none vertical-hr p-hr-2">
                         </div>
 
                         <div class="space-medium "></div>
                     </div>
 
 
-                    <div class="pl-5 col-md-5">
-                        <div class="row mt-3">
-                            <div class="col-md-10 mt-2">
+                    <div class="pl-5 col-lg-5 col-md-12">
+                        <div class="row mt-3  mb-md-5 mb-sm-5">
+                            <div class="col-lg-10 col-md-10 col-sm-10 mt-2">
                                 <span class="text-uppercase font-weight-bolder text-secondary">Repeated
                                     Visitors</span>
                                 <span class="text-white ml-2 wdth-24 pl-2 rounded-circle bg-pink d-inline-block">
@@ -654,29 +666,29 @@
 
                             </div>
 
-                            <div class="col-md-2 text-right">
-                                <img class=" ml-auto" src="./assets/Images/MENU copy (1).png" alt="">
+                            <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                                <img class=" ml-auto" src="./assets/Images/menu .png" alt="">
                             </div>
 
                         </div>
 
-                        <div class="space-medium "></div>
+                        <div class="d-lg-block d-none space-medium "></div>
                         <div class="row my-3">
-                            <div class="col-md-12">
-                                <img class=" img-fluid" src="./assets/Images/SIDE VALUE.png" alt="">
+                            <div class="col-lg-12 col-md-12 col-sm-12 ">
+                                <img class=" img-fluid d-md-block mx-md-auto mx-sm-auto" src="./assets/Images/SIDE VALUE.png" alt="">
                             </div>
                         </div>
 
-                        <div class="row mt-5">
+                        <div class="row mt-5 mb-md-5 mb-sm-5">
                             <div class="col-md-12 text-center">
                                 <div class=" d-inline-block mx-4">
-                                    <span class="text-white ml-2 wdth-24 pl-2 rounded-circle bg-pink d-inline-block">
+                                    <span class="text-white ml-2 wdth-24 rounded-circle bg-pink d-inline-block">
                                         8
                                     </span>
                                     Vedio 1
                                 </div>
                                 <div class=" d-inline-block  mx-5">
-                                    <span class="text-white ml-2 wdth-24 pl-2 rounded-circle bg-pink d-inline-block">
+                                    <span class="text-white ml-2 wdth-24 rounded-circle bg-pink d-inline-block">
                                         8
                                     </span>
                                     Vedio 2
@@ -688,7 +700,7 @@
 
                 </div>
 
-                <div class="row my-5">
+                <div class="row my-5 ">
                     <div class="col-md-12 text-center">
                         <h3 class="clr-pink font-weight-bold">Lorem</h3>
                     </div>
@@ -697,24 +709,21 @@
             </div>
         </div>
     </div>
- 
-  
-  
-  
-  
+
+
+
+
     <footer>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-          
-          <script src="./assets/js/jquery.js"></script>
-          <script src="./assets/js/bootstrap.min.js"></script>
-          <script src="./assets/js/bootstrap.bundle.js"></script>
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="./assets/js/jquery.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.js"></script>
         <script src="app-assets/vendors/js/charts/chart.min.js"></script>
         <script src="app-assets/vendors/js/charts/echarts/echarts.js"></script>
-     
-
-    <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/script.js"></script>
 
     </footer>
 
@@ -723,23 +732,3 @@
 
 </html>
 
-
-<!-- <div class="col-md-8">
-                                <img class=" img-fluid"
-                                    src="./assets/Images/246-2463804_transparent-bar-graph-png-bar-graph-examples-for.png"
-                                    alt="">
-                            </div>
-                            <div class="col-md-4">
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
-                                </div>
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
-                                </div>
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
-                                </div>
-                                <div class="w-75 mb-3 btn btn btn-outline-dark rounded-pill table-bordered text-center">
-                                    Lorem
-                                </div>
-                            </div> -->
