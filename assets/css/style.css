@@ -54,22 +54,23 @@ h3 {
 }
 
 .drp-dwn-hover {
-  transition: 1s;
+  transition: .6s;
 
 }
 
 .drp-dwn-hover:hover {
   background-color: #4D92C8;
+
+
+}
+
+
+.drp-dwn-hover:hover span,
+.drp-dwn-hover:hover .hov,
+.drp-dwn-hover:hover i::before {
   color: #fffcfc !important;
 
 }
-
-.drp-dwn-hover a:hover,
-.drp-dwn-hover span:hover,
-.drp-dwn-hover img:hover {
-  /* color: #fffcfc !important; */
-}
-
 
 
 .wdth-24 {
