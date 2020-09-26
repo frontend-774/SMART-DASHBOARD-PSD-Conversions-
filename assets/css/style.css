@@ -58,14 +58,6 @@ h3 {
 
 }
 
-.drp-dwn-hover:hover {
-  background-color: #4D92C8;
-
-
-}
-
-
-.drp-dwn-hover:hover span,
 .drp-dwn-hover:hover .hov,
 .drp-dwn-hover:hover i::before {
   color: #fffcfc !important;
@@ -79,6 +71,10 @@ h3 {
 
 .width-150 {
   width: 150px;
+}
+
+.width-300 {
+  width: 300px !important;
 }
 
 .mt-150 {
@@ -139,6 +135,10 @@ h3 {
   position: absolute;
   left: 102%;
   top: 38%;
+}
+
+.hide{
+  display: none;
 }
 
 .p-adjust {}
@@ -326,6 +326,13 @@ h3 {
   display: none !important;
 }
 
+.display-none-vertical-bar {
+  display: none !important;
+  transition: 1s !important;
+  position: absolute;
+  margin: 1px 1px 1px -200px;
+}
+
 .icon-image {
   text-decoration: none;
   margin-right: -18px;
@@ -400,6 +407,11 @@ h3 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+.ctn-hover {
+  opacity: 0;
+  display: block;
 }
 
 /* ======================Vertical Nav========================= */
@@ -507,7 +519,7 @@ h3 {
 
 @media (max-width: 768px) {
   .all-vertical-bar {
-    /* margin-left: -17rem; */
+
     display: none;
   }
 
@@ -516,16 +528,139 @@ h3 {
   }
 
   #content-all {
+
     width: 100%;
-    margin: 0;
+    margin-left: 65px !important;
+
+  }
+
+  .cancel-icn {
+    display: block !important;
   }
 
   #content-all.active {
-    margin-left: 17rem;
-    width: calc(100% - 17rem);
+    transition: 1s;
+    margin-left: 120px !important;
+    width: calc(100% - 170px);
   }
-}
 
+  #hide-vertical-bar-1 {
+    margin-left: -150px;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+
+  #hide-vertical-bar-1.active {
+    margin-left: 0px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+
+  .onlick-adjust {
+    transition: 1s;
+  }
+
+  .onlick-adjust.active {
+    transition: 1s;
+    width: 550px;
+    margin-left: 122px;
+  }
+
+  .ctn-hover {
+    opacity: 1;
+    display: block;
+  }
+
+  /* .ctn-hover:hover{
+    opacity: 1;
+  } */
+
+  .js-nav-open:hover {
+    /* opacity: .3; */
+    /* color: rgba(255,255,255);
+    filter: blur(1px); */
+
+  }
+
+  .js-nav-open:hover .hov-1,
+  .js-nav-open:hover .ctn-hover {
+    opacity: 1;
+    color: black;
+  }
+
+
+  #hide-vertical-bar-2 {
+    margin-left: -59px;
+    transition: 1s !important;
+    /* background-color: black !important; */
+  }
+
+  #hide-vertical-bar-2.active {
+    position: fixed;
+    display: block !important;
+    margin-left: 114px;
+    z-index: 1;
+    transition: 1s !important;
+    max-width: 73%;
+    top: 0;
+    bottom: 0;
+}
+  .ds-text {
+    display: block !important;
+    height: 214px !important;
+    margin: 29px 4px 29px 0px;
+  }
+
+  .ds-text.active {
+
+    display: inline-block !important;
+  }
+
+  .nav-hover {
+    height: 111px;
+
+  }
+  .hide{
+    display: inline-block !important;
+  }
+
+  .nav-hover:hover {
+    background-color: #fff;
+    box-shadow: 2px 2px 15px 0 #e5e5e5;
+    height: 111px;
+    width: 111px;
+    border-style: solid;
+    border-width: 0px 8px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 12%;
+    border-color: rgb(255, 0, 183);
+    border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-top-right-radius: 5%;
+    transition-duration: .3s;
+  }
+
+
+  .vertical-nav {
+    height: 230px !important;
+  }
+
+  .calender {
+    background-image: url(../Images/Calender\ Icon.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin-left: 154px;
+  }
+  .max-width-rspnse{
+    max-width: 80% !important;
+  }
+
+
+}
 
 /* ====================== Show case =========================== */
 
@@ -608,7 +743,19 @@ h3 {
   color: white;
 }
 
+@media(max-width:558px) {
 
+  .s1,
+  .s2,
+  .s3,
+  .s4 {
+    margin: 18px 39px !important;
+  }
+
+  .my-responsive {
+    margin: 30px 0px;
+  }
+}
 
 
 @media(max-width:992px) {
@@ -622,15 +769,17 @@ h3 {
     margin: auto;
 
   }
-  .width-350{
+
+  .width-350 {
     width: auto;
   }
-  .pg-responsive-3{
+
+  .pg-responsive-3 {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333% !important;
     max-width: 83.333333% !important;
   }
-   
+
 
 }
 
@@ -643,15 +792,15 @@ h3 {
     display: none !important;
   }
 
-  .pg-responsive-3{
+  .pg-responsive-3 {
     -ms-flex: 0 0 91.666667%;
     flex: 0 0 91.666667%;
     max-width: 91.666667%;
   }
-   
-  
 
- 
+
+
+
 }
 
 
